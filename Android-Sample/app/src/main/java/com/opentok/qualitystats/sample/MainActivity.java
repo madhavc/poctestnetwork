@@ -243,7 +243,7 @@ public class MainActivity extends Activity implements Session.SessionListener, P
             mPrevVideoTimestamp = videoTimestamp;
             mPrevVideoBytes = stats.videoBytesReceived;
 
-            Log.i(LOGTAG, "Video bandwidth: " + mVideoBw + " Video Bytes received: " + stats.videoBytesReceived + " Video packet lost: " + stats.videoPacketsLost + " Video packet loss ratio: " + mVideoPLRatio);
+            Log.i(LOGTAG, "Video bandwidth (bps): " + mVideoBw + " Video Bytes received: " + stats.videoBytesReceived + " Video packet lost: " + stats.videoPacketsLost + " Video packet loss ratio: " + mVideoPLRatio);
 
         }
     }
@@ -277,7 +277,7 @@ public class MainActivity extends Activity implements Session.SessionListener, P
             mPrevAudioTimestamp = audioTimestamp;
             mPrevAudioBytes = stats.audioBytesReceived;
 
-            Log.i(LOGTAG, "Audio bandwidth: " + mAudioBw + " Audio Bytes received: " + stats.audioBytesReceived + " Audio packet lost: " + stats.audioPacketsLost + " Audio packet loss ratio: " + mAudioPLRatio);
+            Log.i(LOGTAG, "Audio bandwidth (bps): " + mAudioBw + " Audio Bytes received: " + stats.audioBytesReceived + " Audio packet lost: " + stats.audioPacketsLost + " Audio packet loss ratio: " + mAudioPLRatio);
 
         }
 
