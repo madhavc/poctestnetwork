@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A810D2F1AAE68B300C84720 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A810D2E1AAE68B300C84720 /* libc++.dylib */; };
+		A576611B1B38763800638FA6 /* OTDefaultAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = A576611A1B38763800638FA6 /* OTDefaultAudioDevice.m */; };
 		A5D01FB31A3A133C005D84F9 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D01FB21A3A133C005D84F9 /* VideoToolbox.framework */; };
 		A5D6F7B41B0FF02800CE1972 /* OTNetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7B31B0FF02800CE1972 /* OTNetworkTest.m */; };
 		D44260F7185F81D800E23699 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44260F6185F81D800E23699 /* Foundation.framework */; };
@@ -53,6 +54,8 @@
 /* Begin PBXFileReference section */
 		0A810D2D1AAE685100C84720 /* OTNetworkStatsKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTNetworkStatsKit.h; sourceTree = "<group>"; };
 		0A810D2E1AAE68B300C84720 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		A57661191B38763800638FA6 /* OTDefaultAudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTDefaultAudioDevice.h; sourceTree = "<group>"; };
+		A576611A1B38763800638FA6 /* OTDefaultAudioDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTDefaultAudioDevice.m; sourceTree = "<group>"; };
 		A5D01FB21A3A133C005D84F9 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		A5D6F7B21B0FF02800CE1972 /* OTNetworkTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTNetworkTest.h; sourceTree = "<group>"; };
 		A5D6F7B31B0FF02800CE1972 /* OTNetworkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTNetworkTest.m; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 		D44260FC185F81D800E23699 /* Hello-World */ = {
 			isa = PBXGroup;
 			children = (
+				A57661191B38763800638FA6 /* OTDefaultAudioDevice.h */,
+				A576611A1B38763800638FA6 /* OTDefaultAudioDevice.m */,
 				A5D6F7B21B0FF02800CE1972 /* OTNetworkTest.h */,
 				A5D6F7B31B0FF02800CE1972 /* OTNetworkTest.m */,
 				0A810D2D1AAE685100C84720 /* OTNetworkStatsKit.h */,
@@ -273,6 +278,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "TokBox, Inc.";
 				TargetAttributes = {
+					D44260F2185F81D800E23699 = {
+						DevelopmentTeam = 89RFQJ3XA6;
+					};
 					D4426116185F81D800E23699 = {
 						TestTargetID = D44260F2185F81D800E23699;
 					};
@@ -326,6 +334,7 @@
 			files = (
 				D4426110185F81D800E23699 /* ViewController.m in Sources */,
 				D4426107185F81D800E23699 /* AppDelegate.m in Sources */,
+				A576611B1B38763800638FA6 /* OTDefaultAudioDevice.m in Sources */,
 				D4426103185F81D800E23699 /* main.m in Sources */,
 				A5D6F7B41B0FF02800CE1972 /* OTNetworkTest.m in Sources */,
 			);
@@ -466,6 +475,8 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}",
@@ -475,6 +486,7 @@
 				INFOPLIST_FILE = "Hello-World/Hello-World-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -489,6 +501,8 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}",
@@ -498,6 +512,7 @@
 				INFOPLIST_FILE = "Hello-World/Hello-World-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
