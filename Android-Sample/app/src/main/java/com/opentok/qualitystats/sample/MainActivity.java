@@ -23,9 +23,9 @@ public class MainActivity extends Activity implements Session.SessionListener, P
 
     private static final String LOGTAG = "quality-stats-demo";
 
-    private static final String SESSION_ID = "";
-    private static final String TOKEN = "";
-    private static final String APIKEY = "";
+    private static final String SESSION_ID = "2_MX40NDkxMjgxMX5-MTQzNTAxMTIyNjE4N35oY1lneXppMFFnK0NUcG9nRmxYTFZMNUN-fg";
+    private static final String TOKEN = "T1==cGFydG5lcl9pZD00NDkxMjgxMSZzZGtfdmVyc2lvbj10YnBocC12MC45MS4yMDExLTA3LTA1JnNpZz03ZjkyNmEwYjlhOTg5NGI4NmRhM2FjMmE5YjlmMDgzOWRmZGQzYjQxOnNlc3Npb25faWQ9Ml9NWDQwTkRreE1qZ3hNWDUtTVRRek5UQXhNVEl5TmpFNE4zNW9ZMWxuZVhwcE1GRm5LME5VY0c5blJteFlURlpNTlVOLWZnJmNyZWF0ZV90aW1lPTE0MzUwMTEyMjYmcm9sZT1tb2RlcmF0b3Imbm9uY2U9MTQzNTAxMTIyNi42NTI4NDg1NDg3NjY1JmV4cGlyZV90aW1lPTE0Mzc2MDMyMjY=";
+    private static final String APIKEY = "44912811";
 
     private static final int TEST_DURATION = 20; //test quality duration in seconds
     private static final int TIME_WINDOW = 3; //3 seconds
@@ -59,6 +59,7 @@ public class MainActivity extends Activity implements Session.SessionListener, P
     private Handler mHandler = new Handler();
 
     private ProgressDialog mProgressDialog;
+    private AlertDialog dialog;
 
 
     @Override
@@ -75,6 +76,15 @@ public class MainActivity extends Activity implements Session.SessionListener, P
 
         if (mSession != null) {
             mSession.disconnect();
+        }
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        if(dialog!= null && dialog.isShowing()){
+            dialog.dismiss();
         }
     }
 
@@ -317,7 +327,7 @@ public class MainActivity extends Activity implements Session.SessionListener, P
         if (mProgressDialog != null && mProgressDialog.isShowing()) {
             mProgressDialog.dismiss();
         }
-        new AlertDialog.Builder(MainActivity.this)
+        dialog = new AlertDialog.Builder(MainActivity.this)
                 .setTitle(title)
                 .setMessage(Message)
                 .setPositiveButton(android.R.string.yes,
